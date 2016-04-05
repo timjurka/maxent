@@ -8,7 +8,8 @@ trains a maximum entropy model given a training matrix and a vector or factor of
 Trains a multinomial logistic regression model of class \code{\link{maxent-class}} given a \code{matrix} or \code{matrix.csr} with training data, and a \code{vector} or \code{factor} with corresponding labels. Additional parameters such as \code{feature_cutoff}, \code{gaussian_prior}, \code{inequality_constraints}, and \code{set_heldout} help prevent model overfitting.
 }
 \usage{
-maxent(feature_matrix, code_vector, l1_regularizer=0.0, l2_regularizer=0.0, use_sgd=FALSE, set_heldout=0, verbose=FALSE)
+maxent(feature_matrix, code_vector, l1_regularizer=0.0, l2_regularizer=0.0,
+use_sgd=FALSE, set_heldout=0, verbose=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -38,9 +39,9 @@ A \code{logical} specifying whether to provide descriptive output about the trai
 Yoshimasa Tsuruoka recommends using one of following three methods if you see overfitting.
 
      1. Set the \code{l1_regularizer} parameter to \code{1.0}, leaving \code{l2_regularizer} and \code{set_heldout} as default.
-     
+
      2. Set the \code{l2_regularizer} parameter to \code{1.0}, leaving \code{l1_regularizer} and \code{set_heldout} as default.
-     
+
      3. Set the \code{set_heldout} parameter to hold-out a portion of your data, leaving \code{l1_regularizer} and \code{l2_regularizer} as default.
 
 If you are using a large number of training samples, try setting the \code{use_sgd} parameter to \code{TRUE}.
@@ -49,7 +50,7 @@ If you are using a large number of training samples, try setting the \code{use_s
 Returns an object of class \code{\link{maxent-class}} with two slots.
 
 \item{model}{A \code{character vector} containing the trained maximum entropy model.}
-\item{weights}{A \code{data.frame} listing all the weights in three columns: \code{Weight}, \code{Label}, and \code{Feature}.} 
+\item{weights}{A \code{data.frame} listing all the weights in three columns: \code{Weight}, \code{Label}, and \code{Feature}.}
 }
 \references{
 Y. Tsuruoka. "A simple C++ library for maximum entropy classification." University of Tokyo Department of Computer Science (Tsujii Laboratory), 2011. URL \url{http://www-tsujii.is.s.u-tokyo.ac.jp/~tsuruoka/maxent/}.

@@ -1,0 +1,26 @@
+Package: maxent
+Type: Package
+Title: Low-memory Multinomial Logistic Regression with Support for Text
+        Classification
+Version: 1.3.2
+Date: 2016-03-29
+Author: Timothy P. Jurka
+Maintainer: Timothy P. Jurka <tpjurka@ucdavis.edu>
+LinkingTo: Rcpp
+Imports:
+    Rcpp (>= 0.12.2)
+Suggests:
+    testthat
+Depends:
+    R (>= 2.13.0),
+    methods,
+    SparseM,
+    tm
+Description: maxent is an R package with tools for low-memory multinomial
+  logistic regression, also known as maximum entropy. The focus of this maximum
+  entropy classifier is to minimize memory consumption on very large datasets,
+  particularly sparse document-term matrices represented by the tm package.
+License: GPL-3
+Packaged: 2011-12-21 21:57:05 UTC; timjurka
+Repository: CRAN
+Date/Publication: 2011-12-22 08:26:10
